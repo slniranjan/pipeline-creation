@@ -242,8 +242,9 @@
     </plugins>
   </build>
   <profiles>
+  <!-- Use this profile if need to run unit and integration test -->
     <!--<profile>
-      <id>all-tests</id>
+      <id>alltests</id>
       <properties>
         <build.profile.id>all-tests</build.profile.id>
         &lt;!&ndash; All tests are run. &ndash;&gt;
