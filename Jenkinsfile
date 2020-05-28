@@ -14,10 +14,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn -DskipTests clean package'
-                /* withSonarQubeEnv('Sonar_Server') {
-                    sh 'mvn clean package sonar:sonar'
-                } */// SonarQube taskId is automatically attached to the pipeline context
-                
             }
         }
 
@@ -33,19 +29,16 @@ pipeline {
             }
         }
 
-        /* stage('Sonarqube') {
+        stage('Sonarqube') {
             // environment {
             //     scannerHome = tool 'SonarQubeScanner'
             // }
             steps {
-                // withSonarQubeEnv('sonarqube') {
-                //     sh "${scannerHome}/bin/sonar-scanner"
-                // }
-                timeout(time: 10, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
-                }
+                withSonarQubeEnv('Sonar_Server') {
+                    sh 'mvn clean package sonar:sonar'
+                } // SonarQube taskId is automatically attached to the pipeline context                
             }
-        } */        
+        }
 
         /* stage('Quality-Gate') {
             steps {
