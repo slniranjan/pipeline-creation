@@ -29,7 +29,7 @@ pipeline {
 
         stage('Integration-Test') {
             steps {
-                sh 'mvn verify -p itest'
+                sh 'mvn verify -P itest'
             }
         }
 
