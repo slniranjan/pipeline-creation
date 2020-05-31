@@ -268,7 +268,7 @@
                 <configuration>
                   <!-- Sets the VM argument line used when integration tests are run. -->
                   <!-- if enabled, integration test runs twice-->
-                  <!-- <argLine>@{failsafeArgLine}</argLine>-->
+                   <argLine>@{failsafeArgLine}</argLine>
                   <!--
                       Skips integration tests if the value of skip.integration.tests property
                       is true
