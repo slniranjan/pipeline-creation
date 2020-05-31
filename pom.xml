@@ -202,7 +202,7 @@
                   <!-- Sets the path to the file which contains the execution data. -->
                   <destFile>${maven-jacoco-plugin.it-exec-file}</destFile>
                   <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
-                  <propertyName>failsafeArgLine</propertyName>
+<!--                  <propertyName>failsafeArgLine</propertyName>-->
                 </configuration>
               </execution>
               <!-- Ensures that the code coverage report for integration tests after integration tests have been run.
@@ -268,7 +268,7 @@
                 <configuration>
                   <!-- Sets the VM argument line used when integration tests are run. -->
                   <!-- if enabled, integration test runs twice-->
-                   <argLine>@{failsafeArgLine}</argLine>
+<!--                   <argLine>@{failsafeArgLine}</argLine>-->
                   <!--
                       Skips integration tests if the value of skip.integration.tests property
                       is true
